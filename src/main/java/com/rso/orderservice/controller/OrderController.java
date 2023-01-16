@@ -24,50 +24,37 @@ public class OrderController {
     private final OrderService orderService;
     //private final ProductService productService;
 
-    @PostMapping("/post-order")
+    @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public ModelAndView createOrder(OrderRequest orderRequest, @RequestParam String name, @RequestParam String address, @RequestParam BigDecimal price){
-        orderRequest.setName(name);
-        orderRequest.setPrice(price);
-        orderRequest.setUserId("1");
-        orderRequest.setAddress(address);
+    public void createOrder(@RequestBody  OrderRequest orderRequest){
+        //System.out.println(orderRequest);
         orderService.createOrder(orderRequest);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("post-order");
-        return modelAndView;
     }
 
 
 
-    @GetMapping("/orders")
+    @GetMapping("")
     @ResponseStatus(HttpStatus.OK)
-    public ModelAndView getAllOrders() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("orders");
+    public List<OrderResponse> getAllOrders() {
+
         List<OrderResponse> listOrders = orderService.getAllOrders();
-        modelAndView.getModelMap().addAttribute("listOrders",listOrders);
-        return modelAndView;
+        //System.out.println(listOrders);
+        return listOrders;
     }
 
 
-    @GetMapping
+    @GetMapping("/products")
     @ResponseStatus(HttpStatus.OK)
-    //public ResponseEntity<ProductRes> getProducts(){
-    //    ProductRes productRes = productService.getProducts();
-    //    return ResponseEntity.ok(productRes);
-    public ModelAndView listProd(){
+    public List<ProductRes> listProducts(){
 
         RestTemplate restTemplate = new RestTemplate();
         ObjectMapper mapper = new ObjectMapper();
-        ModelAndView modelAndView = new ModelAndView();
 
-        ResponseEntity<ProductRes[]> resResponseEntity = restTemplate.getForEntity("http://localhost:8080/product/products", ProductRes[].class);
+        ResponseEntity<ProductRes[]> resResponseEntity = restTemplate.getForEntity("http://localhost:8083/product", ProductRes[].class);
         List<ProductRes> productRes = mapper.convertValue(resResponseEntity.getBody(), new TypeReference<List<ProductRes>>() {});
         //System.out.println(productRes);
 
-        modelAndView.setViewName("index");
-        modelAndView.getModelMap().addAttribute("productRes",productRes);
-        return modelAndView;
+        return productRes;
 
     }
 }
