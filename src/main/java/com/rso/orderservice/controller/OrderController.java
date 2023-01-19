@@ -24,7 +24,7 @@ public class OrderController {
     private final OrderService orderService;
     //private final ProductService productService;
 
-    @PostMapping("")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createOrder(@RequestBody  OrderRequest orderRequest){
         //System.out.println(orderRequest);
@@ -33,7 +33,7 @@ public class OrderController {
 
 
 
-    @GetMapping("")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<OrderResponse> getAllOrders() {
 
