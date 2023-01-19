@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -21,6 +21,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderController {
 
+    private static final String PATH_URL = "http://20.120.124.86"; //http://localhost:8083 //http://20.120.124.86
     private final OrderService orderService;
     //private final ProductService productService;
 
@@ -50,7 +51,7 @@ public class OrderController {
         RestTemplate restTemplate = new RestTemplate();
         ObjectMapper mapper = new ObjectMapper();
 
-        ResponseEntity<ProductRes[]> resResponseEntity = restTemplate.getForEntity("http://20.120.124.86/product", ProductRes[].class); //http://localhost:8083
+        ResponseEntity<ProductRes[]> resResponseEntity = restTemplate.getForEntity(PATH_URL + "/product", ProductRes[].class);
         List<ProductRes> productRes = mapper.convertValue(resResponseEntity.getBody(), new TypeReference<List<ProductRes>>() {});
         //System.out.println(productRes);
 
