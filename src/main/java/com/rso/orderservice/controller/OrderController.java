@@ -50,7 +50,7 @@ public class OrderController {
         RestTemplate restTemplate = new RestTemplate();
         ObjectMapper mapper = new ObjectMapper();
 
-        ResponseEntity<ProductRes[]> resResponseEntity = restTemplate.getForEntity("http://localhost:8083/product", ProductRes[].class);
+        ResponseEntity<ProductRes[]> resResponseEntity = restTemplate.getForEntity("http://20.120.124.86/product", ProductRes[].class); //http://localhost:8083
         List<ProductRes> productRes = mapper.convertValue(resResponseEntity.getBody(), new TypeReference<List<ProductRes>>() {});
         //System.out.println(productRes);
 
