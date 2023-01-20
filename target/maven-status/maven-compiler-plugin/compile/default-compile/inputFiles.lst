@@ -1,8 +1,8 @@
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/service/OrderService.java
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/dto/OrderRequest.java
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/controller/OrderController.java
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/model/Order.java
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/OrderServiceApplication.java
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/dto/ProductRes.java
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/dto/OrderResponse.java
-/Users/anjabrelih/Documents/MM/FRI_Računalniške storitve v oblaku/projekt/order-service1/src/main/java/com/rso/orderservice/repository/OrderRepository.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\repository\OrderRepository.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\dto\OrderRequest.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\service\OrderService.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\dto\OrderResponse.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\dto\ProductRes.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\model\Order.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\controller\OrderController.java
+C:\Users\miham\Documents\GitHub\MM-AB\order-service1\src\main\java\com\rso\orderservice\OrderServiceApplication.java
